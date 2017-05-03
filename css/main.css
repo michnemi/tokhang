@@ -1,0 +1,123 @@
+.background{
+	max-width: 1180px;
+	z-index: 1;
+}
+
+body{
+	overflow: hidden;
+}
+
+.game-body{
+	max-width: 1500px;
+	height: 100vh;
+	overflow: hidden;
+	background-color: orange;
+}
+
+#image-holder{
+	overflow: hidden;
+}
+
+.police{
+	position: absolute;
+    clear: both;
+    margin-top: 524px;
+    margin-left: -690px;
+    z-index: 5;
+}
+
+
+
+.cars{
+	position: absolute;
+    margin-left: 44%;
+    margin-top: -360px;
+    transform: scale(0.1, 0.1);
+    animation: car_animation 5s linear; 
+}
+
+#lane1{
+	position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: -270px;
+    background-color: white;
+    margin-left: 49.75%;
+}
+
+#lane2{
+	position: absolute;
+	width: 12px;
+	height: 30px;
+	margin-top: -233px;
+	background-color: white;
+	margin-left: 49.75%;
+}
+
+#lane3{
+	position: absolute;
+    width: 15px;
+    height: 90px;
+    margin-top: -156px;
+    background-color: white;
+    margin-left: 49.75%;
+}
+
+@keyframes lane_animation1{
+	0%{
+		width: 10px;
+	    height: 10px;
+	    margin-top: -270px;
+	}
+	100%{
+		width: 12px;
+		height: 30px;
+		margin-top: -250px;
+	}
+	
+}
+
+
+@keyframes lane_animation2{
+	0%{
+		width: 12px;
+		height: 30px;
+		margin-top: -233px;
+	}
+	100%{
+		width: 15px;
+	    height: 90px;
+	    margin-top: -190px;
+	}
+	
+}
+
+
+@keyframes lane_animation3{
+	0%{
+		width: 15px;
+	    height: 90px;
+	    margin-top: -156px;
+	}
+	100%{
+		width: 20px;
+		height: 100px;
+		margin-top: -100px;
+	}
+	
+}
+
+@keyframes car_animation{
+	0%{
+		margin-left: 44%;
+	    margin-top: -360px;
+	    transform: scale(0.1, 0.1);
+	}
+
+	100%{
+		margin-left:70%; 
+	    margin-top: -200px;
+		transform: scale(1, 1);
+		visibility: hidden;
+	}
+}
