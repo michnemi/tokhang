@@ -120,3 +120,33 @@ body{
 		transform: scale(1, 1);
 	}
 }
+
+.h1{
+ 	z-index:5; 
+ 	position:absolute;
+ 	margin-left: 100px;
+ 	font-family:Raleway Light;
+ }
+#home{
+	position: absolute;
+	margin-left: 1080px;
+	
+}
+#pause{
+	position: absolute;
+	margin-left: 1000px;
+
+}
+#help{
+	position: absolute;
+	margin-left: 920px;
+}
+button{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	margin-top: -30px;
+}span{
+	font-size: 30px;
+
+}
