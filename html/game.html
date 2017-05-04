@@ -4,50 +4,67 @@
 	<title>NO TITLE PA</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
-	<script type="text/javascript" src = "../js/script.js"></script>
+
 	<script type="text/javascript" src="../bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
 </head>
 <body>
 	<div class="game-body">
 		<div class="h1">
 				<p>TIMER: <span id = "timer"></span>
-						<button class="btn btn-default" id = "help" data-toggle = "modal" data-target = "#mechanics"><span class="glyphicon glyphicon-question-sign" ></span></button>
-						<button class="btn btn-default" id = "home"><span class="glyphicon glyphicon-home" ></span></button>
-						<button class="btn btn-default"  id = "pause"><span class="glyphicon glyphicon-pause"></span></button>
+						<button class="btn btn-default button"  id = "pause" disabled><span class="glyphicon glyphicon-pause" id="pause_class"></span></button>
 				</p>
-		</div> 
-		<div class="text-center">
-			<img src="../images/lane2_1.png" class="background" >
-
 		</div>
-		<img src="../images/police.png" class="police" id = "police"/>
-		<span class="lane"></span>
-		<span class="lane2"></span>
-		<span class="lane3"></span>
+		<div class="h2">
+			<h2 id = "cue" class="text-center"></h2>
 
-		<img src="../images/car1.png" class="cars">		
-		<!-- <img src="../images/car2.png" class="cars">
-		<img src="../images/car3.png" class="cars">
-		<img src="../images/car4.png" class="cars">
-		<img src="../images/car5.png" class="cars">
-		<img src="../images/car6.png" class="cars">
-		<img src="../images/car7.png" class="cars">
-		<img src="../images/car8.png" class="cars">
-		<img src="../images/car9.png" class="cars"> -->
+		</div> 
+		<div class="text-center" id="image-holder">
+			<img src="../images/bg.png" class="background">
+			<img src="../images/police.png" id="police" />
+			<div id="lane1"></div>
+			<div id="lane2"></div>
+			<div id="lane3"></div>
+			<img src="../images/car9.png" id="carRight"/>
+			<img src="../images/car2.png" id="carLeft"/>
+		</div>
+
+		<!--MODAL HERE!-->
+	<div class="modal fade" id="pause_modal" role = "dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- <div class="modal-header">
+					x
+				</div> -->
+				<div class="modal-body">
+					<div>
+						<button class="btn btn-default text-center modal_button" id = "resume" data-dismiss = "modal"><h3>Resume</h3></button>
+
+						<button class="btn btn-default text-center modal_button" id = "home"><h3>Home</h3></button>
+
+						<button class="btn btn-default text-center modal_button" id = "help" data-toggle = "modal" data-target = "#mechanics"><h3>Help</h3></button>
+						
+						<!-- <button class="btn btn-default button" id = "help" data-toggle = "modal" data-target = "#mechanics">HELP</button> -->
+						<!-- <button class="btn btn-default button" id = "home">HOME</button> -->
+					</div>
+					
+				</div>
+			</div>
+		</div>
 		
 	</div>
-<!--MODAL HERE!-->
+
 	<div class="modal fade" id="mechanics" role = "dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type = "button" class="close" data-dismiss = "modal">&times;</button>
 				</div>
-				<div class="modal-body">
+				<div class="modal-body" id="mechanics_body">
 					<h3>Mechanics:</h3>
 					<p>In this game, you have to remain alive on the longest time possible. This could be done by avoiding the cars and bats that would come accross your way. You can avoid them by either swiping from one lane to another, jumping, or shooting. Ofcourse, you can't shoot the vehicles, but you ca shoot the bats. Touching the bats while jumping and bumping on another vehicle would cause you to lose. </p>
-					<h5>Controls:</h5>
+					<h3>Controls:</h3>
 					<p>A - >swipe Left</p>
 					<p>D - >swipe Right</p>
 					<p>Space Bar - >Jump</p>
