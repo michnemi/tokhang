@@ -4,30 +4,81 @@ var pause_time = false;
 
 window.onload = function(){
 	setTimeout(startLanes, 1000);
-	setTimeout(generateCars, 1000);
+	setTimeout(startCarLeft, 1000);
+	setTimeout(startCarRight, 1000);
 
 	document.addEventListener('keypress', carMove);	
 	document.getElementById("home").addEventListener('click', back2home);
 	document.getElementById("pause").addEventListener('click', paused);
-	setTimeout(timeStarter,3000);
+	setTimeout(timeStarter,1000);
 }
 
-function generateCars(){
+
+
+// start leftCar functions
+function startCarLeft(){
 	var timeInterval = getInterval();
 
 	setTimeout(spawnCar, timeInterval);
 
-console.log(timeInterval);
+	// console.log(timeInterval);
 }
 
 function spawnCar(){
-	console.log("here na po");
-	var car = document.getElementById("cars");
+	console.log("spawnCar entered");
+
+	var car = document.getElementById("carLeft");
 	var car_num = generateCarNum();
 
 	car.src = "../images/car"+ car_num + ".png";
-	car.style.animation = "car_animation 5s linear";
+	car.style.animation = "carLeft_animation 5s linear";
+	car.style.visibility = "visible";
+
+	car.addEventListener("animationend", hideCar);
+	
 }
+
+function hideCar(){
+	this.style.visibility = "hidden";
+	this.style.animation = "initial";
+
+	startCarLeft();
+}
+// end leftCar functions
+
+
+// start rightlane functions
+function startCarRight(){
+	console.log("startCarLeft entered");
+	var timeInterval = getInterval();
+
+	setTimeout(spawnCar2, timeInterval);
+
+	console.log(timeInterval);
+}
+
+function spawnCar2(){
+	console.log("spawnCar entered");
+
+	var car = document.getElementById("carRight");
+	var car_num = generateCarNum();
+
+	car.src = "../images/car"+ car_num + ".png";
+	car.style.animation = "carRight_animation 5s linear";
+	car.style.visibility = "visible";
+
+	car.addEventListener("animationend", hideCar2);
+	
+}
+
+function hideCar2(){
+	this.style.visibility = "hidden";
+	this.style.animation = "initial";
+
+	startCarRight();
+}
+
+// end rightLane functions
 
 
 function generateCarNum(){
@@ -64,12 +115,12 @@ function carMove(event){
 		if (event.charCode == 97) {
 			console.log("I pressed A");
 			
-			document.getElementById("police").style.marginLeft = 25 + "%";
+			document.getElementById("police").style.marginLeft = -890 + "px";
 			}
 		else if(event.charCode==100){
 			//console.log(margin);
 			console.log("I pressed D");
-			document.getElementById("police").style.marginLeft = 60 + "%" ;
+			document.getElementById("police").style.marginLeft = -400 + "px" ;
 				}
 		else if (event.charCode==32) {
 			console.log("I pressed SPACE");

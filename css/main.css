@@ -18,7 +18,7 @@ body{
 	overflow: hidden;
 }
 
-.police{
+#police{
 	position: absolute;
     clear: both;
     margin-top: 524px;
@@ -28,12 +28,23 @@ body{
 
 
 
-#cars{
+#carRight{
 	position: absolute;
     margin-left: -51%;
     margin-top: 360px;
     transform: scale(0.1, 0.1);
-    /*animation: car_animation 5s linear; */
+    visibility: hidden;
+    /*animation: car_animation 5s linear;*/
+}
+
+#carLeft{
+	position: absolute;
+	margin-left: -54.5%;
+	margin-top: 360px;
+	transform: scale(0.1, 0.1);
+	visibility: hidden;
+	/*animation: carLeft_animation 5s linear;*/
+
 }
 
 #lane1{
@@ -101,13 +112,13 @@ body{
 	}
 	100%{
 		width: 20px;
-		height: 100px;
-		margin-top: -100px;
+		height: 50px;
+		margin-top: -30px;
 	}
 	
 }
 
-@keyframes car_animation{
+@keyframes carRight_animation{
 	0%{
 		margin-left: -51%;
     	margin-top: 360px;
@@ -115,8 +126,22 @@ body{
 	}
 
 	100%{
-		margin-left:-25%; 
+		margin-left:-30%; 
 	    margin-top: 500px;
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes carLeft_animation{
+	0%{
+		margin-left: -54.5%;
+		margin-top: 360px;
+		transform: scale(0.1, 0.1);
+	}
+
+	100%{
+		margin-left: -70%;
+		margin-top: 500px;
 		transform: scale(1, 1);
 	}
 }
