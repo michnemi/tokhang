@@ -1,0 +1,70 @@
+@font-face{
+	font-family: Schilderwald;
+	src:url(../Schilderwald.tff);
+
+	/*font-family: 'Faster One';
+	src:url(../fonts/FasterOne-Regular.tff);*/
+}
+
+body{
+
+}
+.panel-transparent {
+       /*background: none;*/
+    }
+.panel-transparent{
+        background: rgba(30,44,71, 0.7)!important;
+    }
+
+.gamebody{
+	background-image: url("../images/background.jpg");
+	max-width: 1500px;
+	overflow: hidden;
+	background-size: cover;
+	height: 100vh;
+	z-index: 1;
+	
+
+}
+#newgame{
+	/*background-image: url("../images/newgame.png");*/
+	height: 100px;
+	width: 310px;
+	margin:190px 0px 0px -335px;
+
+
+
+}
+.buttons{
+	height: 100px;
+	width: 310px;
+	margin:10px 0px 0px 0px;
+}
+
+
+#title{
+	/*background-image: url("../images/title.png");*/
+	font-family: 'Faster One';
+	font-size: 100px;
+	position: absolute;
+	height: 200px;
+	width:600px;
+
+}
+#panel{
+	width: 400px;
+	height: 400px;
+	margin-left: 750px;
+	margin-top: -350px;
+
+}
+.panel{
+	font-family: raleway light;
+	font-size: 25px;
+	color:white;
+}
+
+#panel{
+	display:none;
+}
+

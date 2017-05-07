@@ -39,12 +39,18 @@ body{
 
 #carLeft{
 	position: absolute;
-	margin-left: -500px;
-	margin-top: 524px;
+	margin-left: -54.5%;
+	margin-top: 360px;
 	transform: scale(0.1, 0.1);
 	visibility: hidden;
 	/*animation: carLeft_animation 5s linear;*/
 
+}
+
+#enemy{
+	position: absolute;
+    margin-left: -600px;
+    width: 20%;
 }
 
 #lane1{
@@ -91,6 +97,9 @@ body{
 	margin-left: 970px;
 
 }
+#restart{
+	width: 300px;
+}
 #help{
 	/*position: absolute;*/
 	/*margin-left: 890px;*/
@@ -103,6 +112,7 @@ body{
 	margin-top: 10px;
 	margin-left:130px;
 	font-family: raleway light;
+
 }
 .mechanics{
 	z-index:5;
@@ -115,12 +125,12 @@ body{
 	z-index: -1;
 }
 
-.button{
+/*.button{
 	width: 60px;
 	height: 60px;
 	position: absolute;
 	margin-top: -30px;
-}span{
+}*/span{
 	font-size: 30px;
 
 }
@@ -132,9 +142,38 @@ body{
 	font-family: rovi;
 	font-size: 90px;
 }
+#gameover{
+	height:500px;
+	width: 950px;
+	z-index: 10;
+	position: absolute;
+	margin-left: 200px;
+	display: none;
 
+}
+#gameover_icon{
+	
+	/*position: absolute;*/
+	height: 30px;
+	width: 180px;
 
+}
+#home_icon_holder{
+	position: absolute;
+	margin-left:450px;
+	margin-top: 500px;
+	z-index: 6;
+	visibility:hidden;
 
+}
+#restart_icon_holder{
+	position: absolute;
+	margin-left:720px;
+	margin-top: 500px;
+	z-index: 6;
+	visibility:hidden;
+
+}
 @keyframes lane_animation1{
 	0%{
 		width: 10px;
@@ -213,26 +252,9 @@ body{
  	margin-left: 100px;
  	font-family:Raleway Light;
  }
-#home{
-	position: absolute;
-	margin-left: 1080px;
-	
-}
-#pause{
-	position: absolute;
-	margin-left: 1000px;
 
-}
-#help{
-	position: absolute;
-	margin-left: 920px;
-}
-button{
-	width: 60px;
-	height: 60px;
-	position: absolute;
-	margin-top: -30px;
-}
+
+
 span{
 	font-size: 30px;
 

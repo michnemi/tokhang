@@ -4,17 +4,24 @@
 	<title>NO TITLE PA</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../css/main.css"/>
-
 	<script type="text/javascript" src="../bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 </head>
 <body>
 	<div class="game-body">
+		<img src="../images/gameover.png" id="gameover" />
 		<div class="h1">
 				<p>TIMER: <span id = "timer"></span>
 						<button class="btn btn-default button"  id = "pause" disabled><span class="glyphicon glyphicon-pause" id="pause_class"></span></button>
 				</p>
+				<p>Player name: <span id = "player_name"></span></p>
+		</div> 
+		<div >
+			<a href = "#"><button class="btn btn-default" id="home_icon_holder"><span class="glyphicon glyphicon-home" id="gameover_icon"></span></button></a>
+		</div>
+		<div >
+			<a href = "#"><button class="btn btn-default" id="restart_icon_holder"><span class="glyphicon glyphicon-repeat" id="gameover_icon"></span></button></a>
 		</div>
 		<div class="h2">
 			<h2 id = "cue" class="text-center"></h2>
@@ -28,10 +35,12 @@
 			<div id="lane3"></div>
 			<img src="../images/car9.png" id="carRight"/>
 			<img src="../images/car2.png" id="carLeft"/>
+			<!-- <img src="../images/enemy8.gif" id="enemy"/> -->
 		</div>
 
 		<!--MODAL HERE!-->
-	<div class="modal fade" id="pause_modal" role = "dialog">
+	<!--MODAL HERE!-->
+	<div class="modal fade" id="pause_modal" role = "dialog" data-backdrop = "static">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<!-- <div class="modal-header">
@@ -39,12 +48,12 @@
 				</div> -->
 				<div class="modal-body">
 					<div>
-						<button class="btn btn-default text-center modal_button" id = "resume" data-dismiss = "modal"><h3>Resume</h3></button>
+						<button class="btn btn-default modal_button" id = "resume" data-dismiss = "modal"><h3>Resume</h3></button><br>
 
-						<button class="btn btn-default text-center modal_button" id = "home"><h3>Home</h3></button>
+						<button class="btn btn-default  modal_button" id = "home"><h3>Home</h3></button><br>
 
-						<button class="btn btn-default text-center modal_button" id = "help" data-toggle = "modal" data-target = "#mechanics"><h3>Help</h3></button>
-						
+						<button class="btn btn-default modal_button" id = "help" data-toggle = "modal" data-target = "#mechanics"><h3>Help</h3></button>
+						<button class="btn btn-default modal_button" id = "restart"><h3>Restart</h3></button>
 						<!-- <button class="btn btn-default button" id = "help" data-toggle = "modal" data-target = "#mechanics">HELP</button> -->
 						<!-- <button class="btn btn-default button" id = "home">HOME</button> -->
 					</div>
@@ -55,7 +64,7 @@
 		
 	</div>
 
-	<div class="modal fade" id="mechanics" role = "dialog">
+	<div class="modal fade" id="mechanics" data-backdrop = "static" role = "dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
